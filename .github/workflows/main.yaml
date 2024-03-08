@@ -25,4 +25,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           yarn install
-          yarn run ng -- deploy --no-silent
+          npm run ng -- deploy --no-silent
