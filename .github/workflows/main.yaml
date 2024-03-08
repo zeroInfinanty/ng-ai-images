@@ -22,8 +22,9 @@ jobs:
         run: npm install && npm run build:prod
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@releases/v2
         with:
-          folder: ng-ai-images/dist/browser
-          branch: prod  
-          token: ${{ secrets.GH_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.GH_TOKEN }}
+          BASE_BRANCH: main
+          BRANCH: prod  
+          FOLDER: dist/browser
